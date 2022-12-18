@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+.layoutt{
+    height: 100vh;
+    padding: 20px 50px;
+    /* background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%); */
+    background-image: url("backg.png");
+    overflow:hidden;
+    background-repeat:no-repeat;
+    background-size: cover;
+    
+}
+
+.layouttt{
+    height: 100vh;
+    overflow:hidden;
+    background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+    
+}
+
+
+    
+@media screen and (max-width: 992px) {
+    .layoutt{
+        height: 100vh;
+        padding: 20px 50px;
+        /* background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%); */
+        background-image: url("backgg.png");
+        overflow:hidden;
+        background-repeat:no-repeat;
+        background-size: 100%;
+        
+    }
+  }

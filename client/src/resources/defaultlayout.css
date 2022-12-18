@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+.layout{
+    height: 100vh;
+    padding: 20px 50px;
+    background-image: radial-gradient( circle farthest-corner at 1.3% 2.8%,  rgba(239,249,249,1) 0%, rgba(182,199,226,1) 100.2% );
+    overflow:hidden;
+    
+}
+    
+.header{
+    height: 20%;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 5px;
+    display: flex;
+    /* justify-content:center; */
+    align-items: center;
+    padding: 10px 25px;
+}
+
+
+.header h1{
+    font-family: 'Allura', cursive;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 60px;
+    transform:translate(-15%,15%);
+    padding:50PX;
+    
+}
+
+
+
+.content{
+    height: 87%;
+    border: 1px solid gray;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(128, 128, 128, 0.486);
+    /* padding: 10px; */
+}
+
+@media (min-width:500px) {
+     
+
+    .header button{
+        border: 1px solid white !important;
+        color: rgba(255, 255, 255) !important;
+        margin-left:700px;
+    }
+ 
+    
+}
+
+
+@media (max-width:500px) {
+    .header h1{
+    font-family: 'Allura', cursive;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 30px !important;
+    transform:translate(-15%,40%);
+    padding:0px 45px 0px 15px;
+    }
+
+
+}
+
+@media (max-width:500px) {
+    .content{
+        margin-top: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 3px rgba(128, 128, 128, 0.486);
+        padding: 0px;    
+    }
+}
+
+@media (max-width:500px) {
+    .layout{
+        padding: 0px 0px;
+        margin: 0px 0px;
+        background-image: radial-gradient(   rgba(239,249,249,1) 0%, rgba(182,199,226,1) 100.2% );}
+}
+
+@media (max-width:500px) {
+    .header{
+        height: 12%;
+        background-color: rgba(0, 0, 0, 0.85);
+        border-radius: 0px;
+        display: flex;
+        /* justify-content:center; */
+        align-items: center;
+        padding: 10px 10px;
+    }
+
+    .d-flex justify-content-end my-5 mx-5{
+        
+    }
+}
+
+@media (max-width:500px){
+    .header button{
+        border: 1px solid white !important;
+        color: rgba(255, 255, 255) !important;
+        transform:translate(-15%,15%);
+}}
