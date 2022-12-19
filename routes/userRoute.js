@@ -2,7 +2,7 @@ const express = require("express");
 const User = require("../models/userModel");
 const app = express.Router();
 
-
+// app.use(cors({origin:"http://localhost:5000"}));
 var allowCrossDomain = function(req, res, next) {
   res.header('Access-Control-Allow-Origin', "*");
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -13,7 +13,16 @@ var allowCrossDomain = function(req, res, next) {
 
 
 app.use(allowCrossDomain);
- 
+app.post("/register", async (req, res) => {
+  try {
+    const newuser = new User(req.body);
+    await newuser.save();
+
+    res.send("Registration Successfull");
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
 
 app.post("/login", async (req, res) => {
   try {
@@ -61,16 +70,7 @@ app.post("/:username", async (req, res) => {
   }
 });
 
-app.post("/register", async (req, res) => {
-  try {
-    const newuser = new User(req.body);
-    await newuser.save();
 
-    res.send("Registration Successfull");
-  } catch (error) {
-    res.status(400).json(error);
-  }
-});
 
 
 

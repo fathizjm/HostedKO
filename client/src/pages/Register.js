@@ -15,7 +15,7 @@ function Register() {
       message.success("Registration successfull");
     } catch (error) {
       setLoading(false);
-      message.error("Registration failed: Username Taken");
+      message.error("Registration failed");
     }
   };
 

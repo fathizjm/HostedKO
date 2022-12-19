@@ -3,20 +3,23 @@ import "./App.css";
 import "antd/dist/antd.css";
 import { Button } from "antd";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Home from "./pages/Home";
-import Profile from "./pages/Profile";
-import Templates from "./pages/templates";
-import Templates_public from "./pages/templates_public";
-import UserProfile from "./components/UserProfile";
-import User from "./components/User";
+import Login from "../src/pages/Login";
+import Register from "../src/pages/Register";
+import Home from "../src/pages/Home";
+import Profile from "../src/pages/Profile";
+import Templates from "../src/pages/templates";
+import Templates_public from "../src/pages/templates_public";
+import UserProfile from "../src/components/UserProfile";
+import User from "../src/components/User";
 import React, { useState } from "react";
-import Vcard from "./pages/Vcard";
+import Vcard from "../src/pages/Vcard";
+import Favicon from "react-favicon";
+import logoimg from "./components/logo.png"
 
 function App() {
   return (
     <div className="App">
+       <Favicon url={logoimg}/>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />

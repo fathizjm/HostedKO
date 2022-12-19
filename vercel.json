@@ -5,10 +5,48 @@
             "use":"@vercel/node"
         }
     ],
-    "routes":[
+    "rewrites":[
         {
-            "src":"/.*",
-            "dest":"server.js"
+            "source":"/(.*)",
+            "destination":"server.js"
+        },
+        {
+            "source":"/home",
+            "destination":"server.js"
+        },
+        {
+            "source":"/:username",
+            "destination":"server.js"
+        },
+        {
+            "source":"/profile",
+            "destination":"server.js"
+        },
+        {
+            "source":"/templates/:id",
+            "destination":"server.js"
+        },
+        {
+            "source":"/Vcard",
+            "destination":"server.js"
+        },
+        {
+            "source":"/templates_public/:id",
+            "destination":"server.js"
+        },
+        {
+            "source":"/login",
+            "destination":"server.js"
+        },
+        {
+            "source":"/register",
+            "destination":"server.js"
+        },
+        {
+            "source":"/UserProfile",
+            "destination":"server.js"
         }
+
     ]
+
 }

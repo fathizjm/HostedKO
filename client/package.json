@@ -13,6 +13,7 @@
     "mongoose": "^6.8.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-favicon": "^1.0.1",
     "react-images-uploading": "^3.1.7",
     "react-qr-code": "^2.0.8",
     "react-router": "^6.4.5",
@@ -46,6 +47,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": [ "http://localhost:5000/",
-  "http://192.168.0.166:3000/"]
+  "proxy": [
+    "http://localhost:5000/",
+    "http://192.168.0.166:3000/"
+  ]
 }

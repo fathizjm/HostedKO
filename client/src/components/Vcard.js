@@ -2,9 +2,13 @@ import React from 'react'
 import QRCode from "react-qr-code";
 import ReactToPrint from 'react-to-print';
 import { Card } from 'antd';
-import cardim from "./Frame.png";
+
 
 const user = JSON.parse(localStorage.getItem("sheyresume-user")); 
+if (user.username != null)
+var  url=`http://192.168.0.166:3000/${user.username}`
+
+// console.log(url)
 
 const style = {
     margin:"auto",
@@ -12,7 +16,7 @@ const style = {
     width: '390px',
     color: 'white',
     marginTop:'15%',
-    backgroundImage: `url(${cardim})`,
+    backgroundImage: "url('/Frame.png')",
     padding: '1rem 1rem',
     textAlign: 'left',
     fontFamily: 'KoPub Batang',
@@ -38,16 +42,15 @@ const style = {
   
 
   function BusinessCard(props) {
-    var  url=`https://kiaora.vercel.app/${user.username}`
     return (
       <div style={props.style}>
-        <Name name="Sahil" />
+        <Name name="Fathima Naduthody" />
         <JobTitle title="Graphic Designer" />
         <Email email="egold@mail.com" />
         <Address Address="10578/38, Shanker Gali No 2, Kalyan, Maharashtra, Pin code 110055, India" />
         {/* <QRCode value={url} size={85}
     style={{ position:"relative",marginLeft:"77%",marginTop:"-50%" ,background:"white",padding:"2px",width:"90px",height:"90px"}}/> */}
-        <QRCode value={url}  size={85}
+        <QRCode value="andugunfu"  size={85}
     style={{ position:"relative",marginLeft:"77%",marginTop:"-50%" ,background:"white",padding:"2px",width:"90px",height:"90px"}} />
       </div>
     )
